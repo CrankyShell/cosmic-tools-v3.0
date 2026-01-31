@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    background-color: #0b0d17;
+    color: #e0e1dd;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar for the Cosmic Theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0b0d17;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3b82f6; /* Updated to Cosmic Blue */
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb; /* Darker Blue on hover */
+  }
+
+  /* Selection Color */
+  ::selection {
+    background-color: #3b82f6; /* Updated to Cosmic Blue */
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .cosmic-card {
+    @apply bg-cosmic-card border border-white/10 rounded-xl p-6 backdrop-blur-sm;
+  }
+  
+  .cosmic-input {
+    @apply bg-cosmic-bg border border-white/10 rounded-lg px-4 py-2 text-cosmic-text focus:outline-none focus:border-cosmic-accent focus:ring-1 focus:ring-cosmic-accent transition-all duration-300;
+  }
+
+  .cosmic-button {
+    @apply bg-cosmic-accent text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:shadow-neon transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+  
+  .cosmic-nav-link {
+    @apply flex items-center space-x-2 px-4 py-3 rounded-lg transition-all duration-200 text-gray-400 hover:text-white hover:bg-white/5;
+  }
+  
+  .cosmic-nav-link.active {
+    @apply bg-cosmic-accent/10 text-cosmic-accent;
+  }
+}
