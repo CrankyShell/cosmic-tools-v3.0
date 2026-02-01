@@ -1,5 +1,3 @@
----
-
 # Cosmic Tools
 
 **Cosmic Tools** is a free, privacy-focused trading toolkit built by traders, for traders.
