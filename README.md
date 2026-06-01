@@ -25,7 +25,9 @@ Cosmic Tools is a comprehensive, privacy-centric utility suite designed for Fore
 
 Follow these simple steps to run Cosmic Tools locally on your machine.
 
-### 1. Install Dependencies
+### 1. Install Dependencies & Run
 Navigate to the project root folder in your terminal and install the required packages:
 ```bash
 npm install
+
+npm run dev
